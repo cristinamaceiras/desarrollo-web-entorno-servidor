@@ -11,11 +11,7 @@
 						$v_pulgadas = $_POST["fcantidad"];
 						$v_metros = $v_pulgadas * 0.0254;
 						echo $v_pulgadas." pulgadas(s) = ".$v_metros." metro(s)";
-					} else {
-						echo "Unidad no soportada";
-					}
-
-					if ($_POST["funidad"] == "yarda"){
+					} elseif ($_POST["funidad"] == "yarda"){
 						$v_yardas = $_POST["fcantidad"];
 						$v_metros = $v_yardas * 0.9144;
 						echo $v_yardas. " yardas(s) = ".$v_metros." metros(s)";
