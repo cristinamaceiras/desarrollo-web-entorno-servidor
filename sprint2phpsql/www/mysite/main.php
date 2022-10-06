@@ -8,7 +8,7 @@
 			$query = 'SELECT * FROM tCanciones';
 			$result = mysqli_query($db, $query) or die('Query error');
 
-			echo '<table border="5">';
+			echo '<table border="5" width="1200">';
 			echo '<tr>';
 			echo '<th>ID</th>';
 			echo '<th>Nombre</th>';
@@ -19,18 +19,16 @@
 
 			while ($row = mysqli_fetch_array($result)) {
 				echo '<tr>';
-				echo '<td>'.$row['id'].'</td>';
-				echo '<td>'.$row['nombre'];
-				echo '</a>';
-				echo ' ';
-				echo $row['artista'];
-				echo ' ';
-				echo $row['anho'];
-				echo '<br><br>';
-				echo '<img src="';
-				echo $row['url_imagen'];
-				echo '" width ="300" height="300"/>';
-				echo '<br><br>';
+				echo '<td align="center">'.$row['id'].'</td>';
+				echo '<td align="center">';
+				echo '<a href="/detail.php?id='.$row['id'];
+				echo '">'.$row['nombre'];
+				echo '</a></td>';
+				echo '<td align="center">'.$row['artista'].'</td>';
+				echo '<td align="center">'.$row['anho'].'</td>';
+				echo '<td align="center"><img src="'.$row['url_imagen'];
+				echo '" width="400" height="400"/></td>';
+				echo '</tr>';
 			}
 
 			echo '</table>';
