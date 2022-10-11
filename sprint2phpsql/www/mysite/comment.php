@@ -8,8 +8,8 @@
 			$cancion_id = $_POST['cancion_id'];
 			$comentario = $_POST['new_comment'];
 
-			$query = "insert into tComentarios (comentario, cancion_id, usuario_id)
-			values ('".$comentario."',".$cancion_id.",NULL)";
+			$query = "insert into tComentarios (comentario, cancion_id, usuario_id, fecha)
+			values ('".$comentario."',".$cancion_id.",NULL, now())";
 
 			mysqli_query($db, $query) or die('Error');
 
