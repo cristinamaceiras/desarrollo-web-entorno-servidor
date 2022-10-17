@@ -1,7 +1,7 @@
 puntuacion = 0
 
 def comprobar(op):
-    while (op != 'a') & (op != 'b') & (op != 'c'):
+    while (op != "a") & (op != "b") & (op != "c"):
         op = input('Debes introducir solo a, b o c: ')
 
 def correcta(op, correcta, puntuacion):
@@ -17,7 +17,7 @@ print("a) Madrid")
 print("b) Londres")
 print("c) Paris")
 
-opcion = input('Respuesta 1: ')
+opcion = input("Respuesta 1: ")
 
 comprobar(opcion)
 puntuacion = correcta(opcion, "c", puntuacion)
@@ -29,7 +29,7 @@ print("a) A Coruña")
 print("b) Lugo")
 print("c) Pontevedra")
 
-opcion = input('Respuesta 2: ')
+opcion = input("Respuesta 2: ")
 
 comprobar(opcion)
 puntuacion = correcta(opcion, "a", puntuacion)
@@ -41,7 +41,7 @@ print("a) Tarragona")
 print("b) Barcelona")
 print("c) Girona")
 
-opcion = input('Respuesta 3: ')
+opcion = input("Respuesta 3: ")
 
 comprobar(opcion)
 puntuacion = correcta(opcion, "b", puntuacion)
