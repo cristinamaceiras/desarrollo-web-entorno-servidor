@@ -1,5 +1,16 @@
 puntuacion = 0
 
+def comprobar(op):
+    while (op != 'a') & (op != 'b') & (op != 'c'):
+        op = input('Debes introducir solo a, b o c: ')
+
+def correcta(op, correcta, puntuacion):
+    if opcion == correcta:
+        puntuacion += 10
+    else:
+        puntuacion -= 5
+    return puntuacion
+
 #pregunta 1
 print("¿En que ciudad está la torre Eiffel?")
 print("a) Madrid")
@@ -8,14 +19,8 @@ print("c) Paris")
 
 opcion = input('Respuesta 1: ')
 
-while (opcion != 'a') & (opcion != 'b') & (opcion != 'c'):
-    opcion = input('Debes introducir solo a, b o c: ')
-
-if opcion == "a" or opcion == "b":
-    puntuacion -= 5
-else:
-    puntuacion += 10
-
+comprobar(opcion)
+puntuacion = correcta(opcion, "c", puntuacion)
 print()
 
 #pregunta 2
@@ -26,14 +31,8 @@ print("c) Pontevedra")
 
 opcion = input('Respuesta 2: ')
 
-while (opcion != 'a') & (opcion != 'b') & (opcion != 'c'):
-    opcion = input('Debes introducir solo a, b o c: ')
-
-if opcion == "b" or opcion == "c":
-    puntuacion -= 5
-else:
-    puntuacion += 10
-
+comprobar(opcion)
+puntuacion = correcta(opcion, "a", puntuacion)
 print()
 
 #pregunta 3
@@ -44,13 +43,8 @@ print("c) Girona")
 
 opcion = input('Respuesta 3: ')
 
-while (opcion != 'a') & (opcion != 'b') & (opcion != 'c'):
-    opcion = input('Debes introducir solo a, b o c: ')
-
-if opcion == "a" or opcion == "c":
-    puntuacion -= 5
-else:
-    puntuacion += 10
-
+comprobar(opcion)
+puntuacion = correcta(opcion, "b", puntuacion)
 print()
+
 print("Tu puntuación es de: " + str(puntuacion))
