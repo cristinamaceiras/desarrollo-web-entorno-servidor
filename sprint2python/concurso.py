@@ -1,3 +1,5 @@
+import random
+
 puntuacion = 0
 
 def comprobar(op):
@@ -11,40 +13,58 @@ def correcta(op, correcta, puntuacion):
         puntuacion -= 5
     return puntuacion
 
-#pregunta 1
-print("¿En que ciudad está la torre Eiffel?")
-print("a) Madrid")
-print("b) Londres")
-print("c) Paris")
+def pregunta1(puntuacion):
+    print("¿En que ciudad está la torre Eiffel?")
+    print("a) Madrid")
+    print("b) Londres")
+    print("c) Paris")
 
-opcion = input("Respuesta 1: ")
+    opcion = input("Respuesta: ")
 
-comprobar(opcion)
-puntuacion = correcta(opcion, "c", puntuacion)
-print()
+    comprobar(opcion)
+    puntuacion = correcta(opcion, "c", puntuacion)
+    print()
 
-#pregunta 2
-print("¿En que ciudad está la torre de Hércules?")
-print("a) A Coruña")
-print("b) Lugo")
-print("c) Pontevedra")
+    return puntuacion
 
-opcion = input("Respuesta 2: ")
+def pregunta2(puntuacion):
+    print("¿En que ciudad está la torre de Hércules?")
+    print("a) A Coruña")
+    print("b) Lugo")
+    print("c) Pontevedra")
 
-comprobar(opcion)
-puntuacion = correcta(opcion, "a", puntuacion)
-print()
+    opcion = input("Respuesta: ")
 
-#pregunta 3
-print("¿En que ciudad está la Sagrada Familia?")
-print("a) Tarragona")
-print("b) Barcelona")
-print("c) Girona")
+    comprobar(opcion)
+    puntuacion = correcta(opcion, "a", puntuacion)
+    print()
 
-opcion = input("Respuesta 3: ")
+    return puntuacion
 
-comprobar(opcion)
-puntuacion = correcta(opcion, "b", puntuacion)
-print()
+def pregunta3(puntuacion):
+    print("¿En que ciudad está la Sagrada Familia?")
+    print("a) Tarragona")
+    print("b) Barcelona")
+    print("c) Girona")
+
+    opcion = input("Respuesta: ")
+
+    comprobar(opcion)
+    puntuacion = correcta(opcion, "b", puntuacion)
+    print()
+
+    return puntuacion
+
+
+lista = [1,2,3]
+preguntar = random.sample(list(lista), k = 2)
+
+for preg in preguntar:
+    if preg == 1:
+        puntuacion = pregunta1(puntuacion)
+    elif preg == 2:
+        puntuacion = pregunta2(puntuacion)
+    else:
+        puntuacion = pregunta3(puntuacion)
 
 print("Tu puntuación es de: " + str(puntuacion))
