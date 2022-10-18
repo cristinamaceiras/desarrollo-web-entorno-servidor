@@ -3,10 +3,10 @@ def func_factorial2(n):
 
     if n == 0:
         resultado = 1
-    if n == 1:
+    elif n == 1:
         resultado = 1
-
-    for i in range(n):
-        
-
+    else:
+        while(n>1): 
+            resultado *= n
+            n-=1
     return resultado
