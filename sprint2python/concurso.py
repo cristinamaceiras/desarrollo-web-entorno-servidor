@@ -5,7 +5,7 @@ def comprobar(op):
         op = input('Debes introducir solo a, b o c: ')
 
 def correcta(op, correcta, puntuacion):
-    if opcion == correcta:
+    if op == correcta:
         puntuacion += 10
     else:
         puntuacion -= 5
