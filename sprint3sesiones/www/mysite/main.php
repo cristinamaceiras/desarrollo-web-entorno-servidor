@@ -4,6 +4,9 @@
 <html>
 	<body>
 		<h1>Conexión establecida</h1>
+
+		<a href="/logout.php">Logout</a><br><br>
+
 		<?php
 			$query = 'SELECT * FROM tCanciones';
 			$result = mysqli_query($db, $query) or die('Query error');

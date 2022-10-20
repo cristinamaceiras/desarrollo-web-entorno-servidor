@@ -4,6 +4,8 @@
 
 <html>
 	<body>
+		<a href="/logout.php">Logout</a>
+
 		<?php
 			if(!isset($_GET['id'])) {
 				die('No se ha especificado una canción');
