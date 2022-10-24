@@ -23,7 +23,8 @@
 	<body>
 		<h1>Conexión establecida</h1>
 
-		<a href="/logout.php">Logout</a><br><br>
+		<a href="/logout.php">Logout</a>
+		<a href="/cambiar.html">Cambiar contraseña</a><br><br>
 
 		<?php
 			$query = 'SELECT * FROM tCanciones';
