@@ -4,10 +4,19 @@
 <html>
 	<head>
 		<style>
+			img {
+				width: 100px;
+				height: 100px;
+				transition: width 2s, height 2s;
+			}
+
 			img:hover {
 				width: 300px;
 				height: 300px;
-				transition: width 3s, height 3s;
+			}
+
+			.rosa:hover {
+				background-color: pink;
 			}
 		</style>
 	</head>
@@ -30,7 +39,7 @@
 			echo '</tr>';
 
 			while ($row = mysqli_fetch_array($result)) {
-				echo '<tr>';
+				echo '<tr class="rosa">';
 				echo '<td align="center">'.$row['id'].'</td>';
 				echo '<td align="center">';
 				echo '<a href="/detail.php?id='.$row['id'];
@@ -39,7 +48,7 @@
 				echo '<td align="center">'.$row['artista'].'</td>';
 				echo '<td align="center">'.$row['anho'].'</td>';
 				echo '<td align="center"><img src="'.$row['url_imagen'];
-				echo '" width="100" height="100"/></td>';
+				echo '"/></td>';
 				echo '</tr>';
 			}
 
