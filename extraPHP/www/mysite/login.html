@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script>
+			function validar(event) {
+				event.preventDefault();
+
+				var mail = document.getElementById("f_email").value;
+				if(mail.length == 0) {
+					alert("No has escrito nada en el e-mail");
+					return;
+				}
+
+				var contra = document.getElementById("f_password").value;
+				if(contra.length == 0) {
+					alert("No has escrito nada en la contraseña");
+					return;
+				}
+				
+				this.submit();
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				document.getElementById("login").addEventListener("submit", validar);
+			});
+
+		</script>
+	</head>
+
+	<body>
+		<h1>Login</h1>
+
+		<form action="login.php" method="post" id="login">
+			<label for="f_email">Correo electrónico:</label><br>
+			<input name="f_email" id="f_email" type="text" placeholder="e-mail"><br><br>
+			<label for="f_password">Contraseña:</label><br>
+			<input name="f_password" id="f_password" type="password" placeholder="Contraseña"><br><br>
+			<input type="submit" value="Iniciar sesión">
+		</form>
+	</body>
+</html>
