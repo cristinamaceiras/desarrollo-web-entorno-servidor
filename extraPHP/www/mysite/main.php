@@ -35,6 +35,14 @@
 				echo "<hr><br>";
 			}
 		?>
+
+		<form action ="search.php" method="get">
+			<input type="text" name="search" placeholder="Texto de búsqueda">
+			<input type="submit">
+		</form>
+
+		<hr><br>
+
 		<?php
 			$query = 'SELECT * FROM tCanciones';
 			$result = mysqli_query($db, $query) or die('Query error');
