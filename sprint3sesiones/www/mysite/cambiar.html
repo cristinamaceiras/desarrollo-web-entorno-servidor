@@ -6,8 +6,15 @@
 		<h1>Cambiar la contraseña</h1>
 
 		<form action="cambiar.php" method="post">
-			<input name="f_nueva" type="password" placeholder="Nueva contraseña"><br>
-			<input name="f_repetido" type="password" placeholder="Repite la contraseña"><br><br>
+			<label for="f_vieja">Contraseña actual:</label>
+			<input name="f_vieja" id="f_vieja" type="password" placeholder="Antigua contraseña"><br><br>
+
+			<label for="f_nueva">Contraseña nueva:</label>
+			<input name="f_nueva" if="f_nueva" type="password" placeholder="Nueva contraseña"><br><br>
+
+			<label for="f_repetido">Repita contraseña:</label>
+			<input name="f_repetido" id="f_repetido" type="password" placeholder="Repite la contraseña"><br><br>
+
 			<input type="submit" value="Cambiar contraseña">
 		</form>
 	</body>

@@ -13,6 +13,7 @@
 		if ($only_row[1] == $password_posted) {
 			session_start();
 			$_SESSION['user_id'] = $only_row[0];
+			$_SESSION['user_contra'] = $only_row[1];
 			header('Location: main.php');
 		} else {
 			echo '<p>Contraseña incorrecta</p>';
