@@ -5,6 +5,8 @@
 <html>
 	<body>
 		<a href="/logout.php">Logout</a>
+		<a href="main.php">Volver</a>
+		<hr>
 
 		<?php
 			if(!isset($_GET['id'])) {
@@ -27,11 +29,11 @@
 
 		<ul>
 			<?php
-				$query2 = 'select * from tComentarios where cancion_id='.$cancion_id;
-				$result2 = mysqli_query($db, $query2) or die('Query error');
+				$query2 = 'select c.*, u.nombre from tComentarios c join tUsuarios u on c.usuario_id = u.id where cancion_id='.$cancion_id;
+				$result2 = mysqli_query($db, $query2) or die('Query 2 error');
 
 				while ($row = mysqli_fetch_array($result2)) {
-					echo '<li>'.$row['comentario'].'. Fecha: '.$row['fecha'].'</li>';
+					echo '<li>'.$row['comentario'].'. Usuario: '.$row['nombre'].'. Fecha: '.$row['fecha'].'</li>';
 				}
 
 				mysqli_close($db);
