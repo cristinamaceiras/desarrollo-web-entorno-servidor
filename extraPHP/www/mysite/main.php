@@ -23,10 +23,18 @@
 	<body>
 		<h1>Conexión establecida</h1>
 
-		<a href="/logout.php">Logout</a>
-		<a href="/cambiar.html">Cambiar contraseña</a>
-		<hr><br>
-
+		<?php
+			session_start();
+			if (isset($_SESSION['user_id'])) {
+				echo "<p>Estas logueado</p>";
+				echo "<a href='/logout.php'>Logout</a> ";
+				echo "<a href='/cambiar.html'>Cambiar contraseña</a>";
+				echo "<hr><br>";
+			} else {
+				echo "<a href='/login.html'>Login</a>";
+				echo "<hr><br>";
+			}
+		?>
 		<?php
 			$query = 'SELECT * FROM tCanciones';
 			$result = mysqli_query($db, $query) or die('Query error');
