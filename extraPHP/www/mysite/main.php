@@ -21,8 +21,6 @@
 		</style>
 	</head>
 	<body>
-		<h1>Conexión establecida</h1>
-
 		<?php
 			session_start();
 			if (isset($_SESSION['user_id'])) {
@@ -36,7 +34,7 @@
 			}
 		?>
 
-		<form action ="search.php" method="get">
+		<form action ="search.php" method="get" align="center">
 			<input type="text" name="search" placeholder="Texto de búsqueda">
 			<input type="submit">
 		</form>
@@ -47,7 +45,7 @@
 			$query = 'SELECT * FROM tCanciones';
 			$result = mysqli_query($db, $query) or die('Query error');
 
-			echo '<table border="5" width="1200">';
+			/*echo '<table border="5" width="1200">';
 			echo '<tr>';
 			echo '<th>ID</th>';
 			echo '<th>Nombre</th>';
@@ -70,7 +68,7 @@
 				echo '</tr>';
 			}
 
-			echo '</table>';
+			echo '</table>';*/
 
 			mysqli_close($db);
 		?>
