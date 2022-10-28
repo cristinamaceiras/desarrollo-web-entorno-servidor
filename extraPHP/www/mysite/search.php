@@ -19,6 +19,10 @@
 			.rosa:hover {
 				background-color: pink;
 			}
+
+			form {
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body>
@@ -37,6 +41,7 @@
 					echo "<th>Artista</th>";
 					echo "<th>Año</th>";
 					echo "<th>Foto (Pon el ratón encima)</th>";
+					echo "<th>Añadir a favoritos</th>";
 					echo "</tr>";
 
 					while($row = mysqli_fetch_array($result)){
@@ -46,6 +51,11 @@
 						echo "<td align='center'>".$row["artista"]."</td>";
 						echo "<td align='center'>".$row["anho"]."</td>";
 						echo "<td align='center'><img src='".$row["url_imagen"]."'/></td>";
+						echo "<td>";
+						echo "<form method='POST' action='do_add_favorite.php'>";
+						echo "<input type='hidden' name='cancion_id' value='".$row["id"]."'>";
+						echo "<input type='submit'>";
+						echo "</form></td>";
 						echo "</tr>";
 					}
 					echo "</table>";
