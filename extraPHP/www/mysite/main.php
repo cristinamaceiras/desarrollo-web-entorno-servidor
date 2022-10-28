@@ -4,6 +4,7 @@
 <html>
 	<head>
 		<style>
+			/*
 			img {
 				width: 100px;
 				height: 100px;
@@ -17,6 +18,17 @@
 
 			.rosa:hover {
 				background-color: pink;
+			}
+			*/
+
+			.favoritas {
+				text-align: center;
+			}
+
+
+			.favoritas a {
+				font-size: 25px;
+				color: hotpink;
 			}
 		</style>
 	</head>
@@ -41,11 +53,17 @@
 
 		<hr><br>
 
+		<div class="favoritas">
+			<a href="favorites.php">Tus canciones favoritas</a>
+		</div>
+
+		<br><hr>
+
 		<?php
-			$query = 'SELECT * FROM tCanciones';
+			/*$query = 'SELECT * FROM tCanciones';
 			$result = mysqli_query($db, $query) or die('Query error');
 
-			/*echo '<table border="5" width="1200">';
+			echo '<table border="5" width="1200">';
 			echo '<tr>';
 			echo '<th>ID</th>';
 			echo '<th>Nombre</th>';
