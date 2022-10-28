@@ -58,6 +58,8 @@
 				} else {
 					echo "<p>No añadiste canciones favoritas</p>";
 				}
+
+				mysqli_close($db);
 			?>
 		<br><a href="main.php">Volver</a>
 	</body>

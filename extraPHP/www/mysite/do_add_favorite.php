@@ -7,6 +7,8 @@
 
 	$query = "insert into tFavoritos(idUsuario, idCancion) values (".$id_usuario.", ".$id_cancion.")";
 	$result = mysqli_query($db, $query) or die("Query error");
+
+	mysqli_close($db);
 ?>
 
 <html>

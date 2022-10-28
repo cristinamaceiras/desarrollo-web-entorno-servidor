@@ -62,6 +62,8 @@
 				} else {
 					echo "<p>No coincide con ninguna cancion</p>";
 				}
+
+				mysqli_close($db);
 			?>
 		<br><a href="main.php">Volver</a>
 	</body>

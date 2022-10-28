@@ -21,4 +21,6 @@
 	} else {
 		echo '<p>Usuario no encontrado con ese email</p>';
 	}
+
+	mysqli_close($db);
 ?>
