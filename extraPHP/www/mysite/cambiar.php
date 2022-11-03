@@ -20,4 +20,6 @@
 	} else {
 		echo "<p>La contraseña actual es incorrecta</p>";
 	}
+
+	mysqli_close($db);
 ?>
