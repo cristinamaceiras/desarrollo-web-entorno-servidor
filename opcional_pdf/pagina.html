@@ -1,6 +1,18 @@
 <html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
 	<body>
-		<h1>Hola</h1>
-		<a href="pagina.php">pdf</a>
+		<h1>Añade tus datos para el diploma, por favor</h1>
+
+		<form action="pagina.php" method="post">
+			<label for="name">Nombre:</label>
+			<input id="name" name="name" type="text">
+
+			<label for="ape">Apellidos:</label>
+			<input id="ape" name="ape" type="text">
+
+			<input type="submit" value="Generar diploma">			
+		</form>
 	</body>
 </html>
